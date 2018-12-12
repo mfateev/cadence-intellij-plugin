@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>com.uber.cadence.cadence-intellij-plugin</id>
+    <name>Uber Cadence</name>
+    <vendor email="cadence@uber.com" url="http://http://cadenceworkflow.io">Uber</vendor>
+    <version>0.0.1</version>
+    <change-notes>Initial release of the Uber Cadence plugin.</change-notes>
+
+    <description><![CDATA[
+    Plugin for Uber Cadence workflow engine.
+    ]]></description>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="Cadence Tool Window" icon="/com/uber/cadence/intellij/toolIcon.svg" anchor="right" factoryClass="com.uber.cadence.intellij.CadenceToolWindowFactory"/>
+        <projectConfigurable instance="com.uber.cadence.intellij.CadenceConfigurable" displayName="Cadence"></projectConfigurable>
+    </extensions>
+
+    <actions>
+        <group id="MyPlugin.SampleMenu" text="Greeting" description="Greeting menu">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="Myplugin.Textboxes" class="com.uber.cadence.intellij.HelloAction" text="Hello" description="Says hello"/>
+        </group>
+    </actions>
+</idea-plugin>
